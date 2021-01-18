@@ -12,6 +12,11 @@ function go() {
 	bg.src = "img/bg/".concat(document.getElementById("bg")[bg_chosen].value,".png")
 	doll.drawImage(bg, 0, 0);
 	
+	var back = new Image();
+	var back_chosen = document.getElementById("back").selectedIndex;
+	back.src = "img/back/".concat(document.getElementById("back")[back_chosen].value,".png")
+	doll.drawImage(back, 0, 0);
+	
 	var body = new Image();
 	body.src = "img/body/0.png";
 	doll.drawImage(body, 0, 0);
@@ -26,7 +31,6 @@ function go() {
 	mouths.src = "img/mouths/".concat(document.getElementById("mouths")[mouths_chosen].value,".png")
 	doll.drawImage(mouths, 0, 0);
 	
-	
 	var hats = new Image();
 	var hats_chosen = document.getElementById("hats").selectedIndex;
 	hats.src = "img/hats/".concat(document.getElementById("hats")[hats_chosen].value,".png")
@@ -36,6 +40,31 @@ function go() {
 	var weapons_chosen = document.getElementById("weapons").selectedIndex;
 	weapons.src = "img/weapons/".concat(document.getElementById("weapons")[weapons_chosen].value,".png")
 	doll.drawImage(weapons, 0, 0);
+	
+	var offhands = new Image();
+	var offhands_chosen = document.getElementById("offhands").selectedIndex;
+	offhands.src = "img/offhands/".concat(document.getElementById("offhands")[offhands_chosen].value,".png")
+	doll.drawImage(offhands, 0, 0);
+	
+	var pants = new Image();
+	var pants_chosen = document.getElementById("pants").selectedIndex;
+	pants.src = "img/pants/".concat(document.getElementById("pants")[pants_chosen].value,".png")
+	doll.drawImage(pants, 0, 0);
+	
+	var acc1 = new Image();
+	var acc1_chosen = document.getElementById("acc1").selectedIndex;
+	acc1.src = "img/acc/".concat(document.getElementById("acc1")[acc1_chosen].value,".png")
+	doll.drawImage(acc1, 0, 0);
+	
+	var acc2 = new Image();
+	var acc2_chosen = document.getElementById("acc2").selectedIndex;
+	acc2.src = "img/acc/".concat(document.getElementById("acc2")[acc2_chosen].value,".png")
+	doll.drawImage(acc2, 0, 0);
+	
+	var acc3 = new Image();
+	var acc3_chosen = document.getElementById("acc3").selectedIndex;
+	acc3.src = "img/acc/".concat(document.getElementById("acc3")[acc3_chosen].value,".png")
+	doll.drawImage(acc3, 0, 0);
 }
 </script>
 <style>
@@ -81,12 +110,46 @@ Hats:
 	<option value="1">helmet turtle</option>
 </select>
 <br>
-
+Back Items:
+<select id="back">
+	<option value="0">Nothing</option>
+</select>
+<br>
 Weapons:
 <select id="weapons">
 	<option value="0">Fists of Fury</option>
 	<option value="1">seal-clubbing club</option>
+	<option value="2">turtle totem</option>
 </select>
+<br>
+Off-hand:
+<select id="offhands">
+	<option value="0">Nothing</option>
+</select>
+<br>
+Pants:
+<select id="pants">
+	<option value="0">Nothing</option>
+</select>
+<br>
+Accessory:
+<select id="acc1">
+	<option value="0">Nothing</option>
+</select>
+<br>
+Accessory:
+<select id="acc2">
+	<option value="0">Nothing</option>
+</select>
+<br>
+Accessory:
+<select id="acc3">
+	<option value="0">Nothing</option>
+</select>
+<br>
+
+
+
 <br>
 <button type="button" onClick="go()">Go!</button>
 </html>
