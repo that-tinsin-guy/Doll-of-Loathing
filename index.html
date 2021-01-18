@@ -8,7 +8,8 @@ function go() {
 	doll.clearRect(0, 0, dollbox.width, dollbox.height);
 	
 	var bg = new Image();
-	bg.src = "img/bg/".concat(document.getElementById("bg").selectedIndex,".png")
+	var bg_chosen = document.getElementById("bg").selectedIndex;
+	bg.src = "img/bg/".concat(document.getElementById("bg")[bg_chosen].value,".png")
 	doll.drawImage(bg, 0, 0);
 	
 	var body = new Image();
@@ -16,21 +17,25 @@ function go() {
 	doll.drawImage(body, 0, 0);
 	
 	var eyes = new Image();
-	eyes.src = "img/eyes/".concat(document.getElementById("eyes").selectedIndex,".png")
+	var eyes_chosen = document.getElementById("eyes").selectedIndex;
+	eyes.src = "img/eyes/".concat(document.getElementById("eyes")[eyes_chosen].value,".png")
 	doll.drawImage(eyes, 0, 0);
 	
 	var mouths = new Image();
-	mouths.src = "img/mouths/".concat(document.getElementById("mouths").selectedIndex,".png")
+	var mouths_chosen = document.getElementById("mouths").selectedIndex;
+	mouths.src = "img/mouths/".concat(document.getElementById("mouths")[mouths_chosen].value,".png")
 	doll.drawImage(mouths, 0, 0);
 	
+	
 	var hats = new Image();
-	hats.src = "img/hats/".concat(document.getElementById("hats").selectedIndex,".png")
+	var hats_chosen = document.getElementById("hats").selectedIndex;
+	hats.src = "img/hats/".concat(document.getElementById("hats")[hats_chosen].value,".png")
 	doll.drawImage(hats, 0, 0);
 	
 	var weapons = new Image();
-	weapons.src = "img/weapons/".concat(document.getElementById("weapons").selectedIndex,".png")
+	var weapons_chosen = document.getElementById("weapons").selectedIndex;
+	weapons.src = "img/weapons/".concat(document.getElementById("weapons")[weapons_chosen].value,".png")
 	doll.drawImage(weapons, 0, 0);
-	
 }
 </script>
 <style>
@@ -51,36 +56,36 @@ The character goes here.
 <br>
 Background:
 <select id="bg">
-	<option>Void</option>
-	<option>Hilltop</option>
-	<option>Castle Rooftop</option>
+	<option value="0">Void</option>
+	<option value="1">Hilltop</option>
+	<option value="2">Castle Rooftop</option>
 </select>
 <br>
 Eyes:
 <select id="eyes">
-	<option>Straight-On</option>
-	<option>Dreamworks</option>
-	<option>Top-lash</option>
-	<option>Side-lashes</option>
+	<option value="0">Straight-On</option>
+	<option value="1">Dreamworks</option>
+	<option value="2">Top-lash</option>
+	<option value="3">Side-lashes</option>
 </select>
 <br>
 Mouths:
 <select id="mouths">
-	<option>Smiling</option>
-	<option>Frowning</option>
+	<option value="0">Smiling</option>
+	<option value="1">Frowning</option>
 </select>
 <br>
 Hats:
 <select id="hats">
-	<option>Nothing</option>
-	<option>helmet turtle</option>
+	<option value="0">Nothing</option>
+	<option value="1">helmet turtle</option>
 </select>
 <br>
 
 Weapons:
 <select id="weapons">
-	<option>Fists of Fury</option>
-	<option>seal-clubbing club</option>
+	<option value="0">Fists of Fury</option>
+	<option value="1">seal-clubbing club</option>
 </select>
 <br>
 <button type="button" onClick="go()">Go!</button>
