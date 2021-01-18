@@ -46,6 +46,11 @@ function go() {
 	offhands.src = "img/offhands/".concat(document.getElementById("offhands")[offhands_chosen].value,".png")
 	doll.drawImage(offhands, 0, 0);
 	
+	var shirts = new Image();
+	var shirts_chosen = document.getElementById("shirts").selectedIndex;
+	shirts.src = "img/shirts/".concat(document.getElementById("shirts")[shirts_chosen].value,".png")
+	doll.drawImage(shirts, 0, 0);
+	
 	var pants = new Image();
 	var pants_chosen = document.getElementById("pants").selectedIndex;
 	pants.src = "img/pants/".concat(document.getElementById("pants")[pants_chosen].value,".png")
@@ -107,7 +112,8 @@ Mouths:
 Hats:
 <select id="hats">
 	<option value="0">Nothing</option>
-	<option value="1">helmet turtle</option>
+	<option value="3">helmet turtle</option>
+	<option value="2283">seal-skull helmet</option>
 </select>
 <br>
 Back Items:
@@ -118,18 +124,30 @@ Back Items:
 Weapons:
 <select id="weapons">
 	<option value="0">Fists of Fury</option>
+	<option value="1779">cardboard katana</option>
+	<option value="1921">cardboard wakizashi</option>
 	<option value="1">seal-clubbing club</option>
-	<option value="2">turtle totem</option>
+	<option value="4">turtle totem</option>
 </select>
 <br>
 Off-hand:
 <select id="offhands">
+	<option value="0">Nothing</option>
+	<option value="1779">cardboard katana</option>
+	<option value="1921">cardboard wakizashi</option>
+	<option value="1">seal-clubbing club</option>
+	<option value="4">turtle totem</option>
+</select>
+<br>
+Shirts:
+<select id="shirts">
 	<option value="0">Nothing</option>
 </select>
 <br>
 Pants:
 <select id="pants">
 	<option value="0">Nothing</option>
+	<option value="79">bugbear bungguard</option>
 </select>
 <br>
 Accessory:
