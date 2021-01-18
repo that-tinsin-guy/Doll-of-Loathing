@@ -9,17 +9,28 @@ function go() {
 	
 	var bg = new Image();
 	bg.src = "img/bg/".concat(document.getElementById("bg").selectedIndex,".png")
+	doll.drawImage(bg, 0, 0);
+	
 	var body = new Image();
 	body.src = "img/body/0.png";
+	doll.drawImage(body, 0, 0);
+	
 	var eyes = new Image();
 	eyes.src = "img/eyes/".concat(document.getElementById("eyes").selectedIndex,".png")
+	doll.drawImage(eyes, 0, 0);
+	
 	var mouths = new Image();
 	mouths.src = "img/mouths/".concat(document.getElementById("mouths").selectedIndex,".png")
-	
-	doll.drawImage(bg, 0, 0);
-	doll.drawImage(body, 0, 0);
-	doll.drawImage(eyes, 0, 0);
 	doll.drawImage(mouths, 0, 0);
+	
+	var hats = new Image();
+	hats.src = "img/hats/".concat(document.getElementById("hats").selectedIndex,".png")
+	doll.drawImage(hats, 0, 0);
+	
+	var weapons = new Image();
+	weapons.src = "img/weapons/".concat(document.getElementById("weapons").selectedIndex,".png")
+	doll.drawImage(weapons, 0, 0);
+	
 }
 </script>
 <style>
@@ -49,6 +60,8 @@ Eyes:
 <select id="eyes">
 	<option>Straight-On</option>
 	<option>Dreamworks</option>
+	<option>Top-lash</option>
+	<option>Side-lashes</option>
 </select>
 <br>
 Mouths:
@@ -56,7 +69,19 @@ Mouths:
 	<option>Smiling</option>
 	<option>Frowning</option>
 </select>
+<br>
+Hats:
+<select id="hats">
+	<option>Nothing</option>
+	<option>helmet turtle</option>
+</select>
+<br>
 
+Weapons:
+<select id="weapons">
+	<option>Fists of Fury</option>
+	<option>seal-clubbing club</option>
+</select>
 <br>
 <button type="button" onClick="go()">Go!</button>
 </html>
