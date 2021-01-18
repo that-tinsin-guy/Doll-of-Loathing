@@ -8,8 +8,8 @@ function go() {
 	doll.clearRect(0, 0, dollbox.width, dollbox.height);
 	
 	var bg = new Image();
-	var bg_chosen = document.getElementById("bg").selectedIndex;
-	bg.src = "img/bg/".concat(document.getElementById("bg")[bg_chosen].value,".png")
+	var loc_chosen = document.getElementById("location").selectedIndex;
+	bg.src = "img/bg/".concat(document.getElementById("location")[loc_chosen].value,".png")
 	doll.drawImage(bg, 0, 0);
 	
 	var back = new Image();
@@ -36,16 +36,6 @@ function go() {
 	hats.src = "img/hats/".concat(document.getElementById("hats")[hats_chosen].value,".png")
 	doll.drawImage(hats, 0, 0);
 	
-	var weapons = new Image();
-	var weapons_chosen = document.getElementById("weapons").selectedIndex;
-	weapons.src = "img/weapons/".concat(document.getElementById("weapons")[weapons_chosen].value,".png")
-	doll.drawImage(weapons, 0, 0);
-	
-	var offhands = new Image();
-	var offhands_chosen = document.getElementById("offhands").selectedIndex;
-	offhands.src = "img/offhands/".concat(document.getElementById("offhands")[offhands_chosen].value,".png")
-	doll.drawImage(offhands, 0, 0);
-	
 	var shirts = new Image();
 	var shirts_chosen = document.getElementById("shirts").selectedIndex;
 	shirts.src = "img/shirts/".concat(document.getElementById("shirts")[shirts_chosen].value,".png")
@@ -55,6 +45,16 @@ function go() {
 	var pants_chosen = document.getElementById("pants").selectedIndex;
 	pants.src = "img/pants/".concat(document.getElementById("pants")[pants_chosen].value,".png")
 	doll.drawImage(pants, 0, 0);
+	
+	var weapons = new Image();
+	var weapons_chosen = document.getElementById("weapons").selectedIndex;
+	weapons.src = "img/weapons/".concat(document.getElementById("weapons")[weapons_chosen].value,".png")
+	doll.drawImage(weapons, 0, 0);
+	
+	var offhands = new Image();
+	var offhands_chosen = document.getElementById("offhands").selectedIndex;
+	offhands.src = "img/offhands/".concat(document.getElementById("offhands")[offhands_chosen].value,".png")
+	doll.drawImage(offhands, 0, 0);
 	
 	var acc1 = new Image();
 	var acc1_chosen = document.getElementById("acc1").selectedIndex;
@@ -70,6 +70,10 @@ function go() {
 	var acc3_chosen = document.getElementById("acc3").selectedIndex;
 	acc3.src = "img/acc/".concat(document.getElementById("acc3")[acc3_chosen].value,".png")
 	doll.drawImage(acc3, 0, 0);
+	
+	bg.src = "img/fg/".concat(document.getElementById("location")[loc_chosen].value,".png")
+	doll.drawImage(fg, 0, 0);
+	
 }
 </script>
 <style>
@@ -88,11 +92,10 @@ The character goes here.
 
 
 <br>
-Background:
-<select id="bg">
-	<option value="0">Void</option>
-	<option value="1">Hilltop</option>
-	<option value="2">Castle Rooftop</option>
+Location:
+<select id="location">
+	<option value="0">Nowhere</option>
+	<option value="112">The Sleazy Back Alley</option>
 </select>
 <br>
 Eyes:
@@ -136,7 +139,7 @@ Weapons:
 	<option value="5">pasta spoon</option>
 	<option value="7">saucepan</option>
 	<option value="1">seal-clubbing club</option>
-	<option value="11">stolen accordion</option>
+	<option value="11">stolen accordion [2h]</option>
 	<option value="4">turtle totem</option>
 </select>
 <br>
