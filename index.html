@@ -71,7 +71,8 @@ function go() {
 	acc3.src = "img/acc/".concat(document.getElementById("acc3")[acc3_chosen].value,".png")
 	doll.drawImage(acc3, 0, 0);
 	
-	bg.src = "img/fg/".concat(document.getElementById("location")[loc_chosen].value,".png")
+	var fg = new Image();
+	fg.src = "img/fg/".concat(document.getElementById("location")[loc_chosen].value,".png")
 	doll.drawImage(fg, 0, 0);
 	
 }
