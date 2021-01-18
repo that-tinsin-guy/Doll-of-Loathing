@@ -1,0 +1,61 @@
+<html>
+<head>
+<title>Tinsin.Party :: Kingdom of Loathing Doll-O-Matic</title>
+<script>
+function go() {
+	var dollbox = document.getElementById('doll')
+	var doll = dollbox.getContext('2d');
+	doll.clearRect(0, 0, dollbox.width, dollbox.height);
+	
+	var bg = new Image();
+	bg.src = "img/bg/".concat(document.getElementById("bg").selectedIndex,".png")
+	var body = new Image();
+	body.src = "img/body/0.png";
+	var eyes = new Image();
+	eyes.src = "img/eyes/".concat(document.getElementById("eyes").selectedIndex,".png")
+	var mouths = new Image();
+	mouths.src = "img/mouths/".concat(document.getElementById("mouths").selectedIndex,".png")
+	
+	doll.drawImage(bg, 0, 0);
+	doll.drawImage(body, 0, 0);
+	doll.drawImage(eyes, 0, 0);
+	doll.drawImage(mouths, 0, 0);
+}
+</script>
+<style>
+	canvas {
+		border: 1px solid black;
+	}
+</style>
+</head>
+
+
+
+
+<canvas id="doll" width="500" height="500">
+The character goes here.
+</canvas>
+
+
+<br>
+Background:
+<select id="bg">
+	<option>Void</option>
+	<option>Hilltop</option>
+	<option>Castle Rooftop</option>
+</select>
+<br>
+Eyes:
+<select id="eyes">
+	<option>Straight-On</option>
+	<option>Dreamworks</option>
+</select>
+<br>
+Mouths:
+<select id="mouths">
+	<option>Smiling</option>
+</select>
+
+<br>
+<button type="button" onClick="go()">Go!</button>
+</html>
